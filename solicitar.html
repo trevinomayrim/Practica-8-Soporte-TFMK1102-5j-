@@ -1,17 +1,12 @@
-<!-- Indica al navegador que el archivo es un documento HTML5 -->
+
 <!DOCTYPE html>
-
-<!-- Etiqueta raíz: todo el código va dentro de estas etiquetas -->
 <html>
-
-<!-- Sección de cabecera: configuración, metadatos, estilos -->
 <head>
-    <!-- Define el conjunto de caracteres para mostrar bien Ñ, tildes y símbolos -->
     <meta charset="UTF-8">
     <!-- Nombre que se muestra en la pestaña del navegador -->
     <title>Solicitar Soporte</title>
     
-    <!-- Inicia el bloque de estilos CSS -->
+    <!--CSS -->
     <style>
         /* Estilo general de toda la página */
         body {
@@ -21,7 +16,7 @@
             margin: 0;                 /* Quita el margen exterior por defecto del navegador */
         }
 
-        /* Estilo para el título principal */
+        /* Estilo título principal */
         h1 {
             color: #003366;            /* Color del texto */
             padding: 15px;             /* Espacio alrededor del texto por dentro */
@@ -29,14 +24,14 @@
             margin: 0;                 /* Quita el espacio exterior por defecto */
         }
 
-        /* Estilo de la barra de navegación */
+        /* Estilo barra de navegación */
         nav {
             background-color: #3498db; /* Color de fondo de la franja */
             padding: 10px;             /* Espacio interior de la barra */
             text-align: center;        /* Centra los enlaces contenidos */
         }
 
-        /* Estilo de los enlaces dentro de la barra */
+        /* Estilo enlaces dentro de la barra */
         nav a {
             color: white;              /* Color del texto del enlace */
             text-decoration: none;    /* Elimina la línea subrayada por defecto */
@@ -66,14 +61,14 @@
             padding: 20px;             /* Espacio interior entre el borde y los campos */
             border: 2px solid #99ccff; /* Borde: grosor, tipo línea continua, color */
             max-width: 400px;          /* Ancho máximo que puede alcanzar el formulario */
-            margin: 0 auto;            /* Centra el formulario: 0 arriba/abajo, auto izquierda/derecha */
+            margin: 0 auto;            /* Centra el formulario */
         }
 
         /* Estilo para campos de entrada, lista desplegable y área de texto */
         input, select, textarea {
             width: 100%;               /* Ocupa todo el ancho disponible dentro del formulario */
             padding: 7px;              /* Espacio interior dentro de la caja */
-            margin: 5px 0 12px 0;      /* Espacio exterior: arriba, derecha, abajo, izquierda */
+            margin: 5px 0 12px 0;      /* Espacio exterior*/
             box-sizing: border-box;   /* Incluye borde y relleno en el ancho total definido */
         }
 
@@ -81,10 +76,10 @@
         button {
             background-color: #27ae60; /* Color de fondo del botón */
             color: white;              /* Color del texto del botón */
-            border: none;              /* Elimina el borde por defecto del botón */
+            border: none;              /* Elimina el borde  del botón */
             padding: 10px;             /* Espacio interior del botón */
             width: 100%;               /* El botón ocupa todo el ancho del formulario */
-            cursor: pointer;           /* Cambia el cursor a mano al pasar sobre el botón */
+            
         }
 
         /* Estilo del pie de página */
@@ -97,7 +92,6 @@
     <!-- Fin del bloque de estilos -->
 </head>
 
-<!-- Cuerpo: todo lo visible en pantalla va aquí -->
 <body>
 
     <!-- Título principal de la página -->
@@ -105,40 +99,45 @@
 
     <!-- Barra de navegación con enlaces -->
     <nav>
-        <!-- Enlace: href indica la página que se abre al hacer clic -->
+        <!-- href indica la página que se abre al hacer clic -->
         <a href="index.html">Inicio</a>
         <a href="solicitar.html">Solicitar Soporte</a>
     </nav>
 
-    <!-- Etiqueta main: contenido principal de la página -->
+    <!-- main: contenido principal de la página -->
     <main>
         <!-- Subtítulo -->
         <h2>Completa el Formulario</h2>
         
-        <!-- Etiqueta form: crea un formulario para recopilar datos
+        <!-- form: crea un formulario para recopilar datos
              action="#" = los datos se envían a la misma página (ejemplo)
              method="post" = método seguro para enviar información -->
         <form action="#" method="post">
             
-            <!-- Etiqueta label: texto descriptivo de un campo -->
+            <!-- label: texto descriptivo de un campo -->
             <label>Nombre Completo:</label>
-            <!-- input = campo de entrada de texto
+           
+            <input type="text" name="nombre" required>
+              <!-- input = campo de entrada de texto
                  type="text" = acepta cualquier texto
                  name = nombre para identificar el dato enviado
                  required = campo obligatorio, no se puede enviar vacío -->
-            <input type="text" name="nombre" required>
 
             <label>Correo Electrónico:</label>
+            
             <!-- type="email" = valida que el texto tenga formato de correo -->
             <input type="email" name="correo" required>
 
             <label>Teléfono:</label>
+            
             <!-- type="tel" = campo para números telefónicos -->
             <input type="tel" name="telefono" required>
 
             <label>Tipo de Equipo:</label>
+            
             <!-- select = lista desplegable para elegir una opción -->
             <select name="equipo">
+                
                 <!-- option = cada opción disponible en la lista -->
                 <option>Computadora de Escritorio</option>
                 <option>Laptop / Portátil</option>
@@ -149,6 +148,7 @@
             <input type="text" name="marca">
 
             <label>Describe tu problema:</label>
+            
             <!-- textarea = campo de texto con varias líneas
                  rows = número de líneas visibles en la caja -->
             <textarea name="problema" rows="4" required></textarea>
@@ -171,8 +171,5 @@
         <p>Treviño Fierro Mayrim Kassandra | 5-J | Matrícula: 1102 | Práctica 8</p>
     </footer>
 
-<!-- Cierra el contenido visible -->
 </body>
-
-<!-- Fin del documento -->
 </html>
